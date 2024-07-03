@@ -1,15 +1,16 @@
 buildscript {
 
     dependencies {
-        classpath ("com.moowork.gradle:gradle-node-plugin:1.2.0")
+        classpath("com.github.node-gradle:gradle-node-plugin:7.0.2")
     }
 }
 
 plugins {
-    id "com.moowork.node" version "1.2.0"
+    //id "com.moowork.node" version "1.2.0"
+    id("com.github.node-gradle.node") version "7.0.2"
 }
 
-apply plugin: 'com.moowork.node'
+apply plugin: 'com.github.node-gradle.node'
 
 node {
     // Version of node to use.
@@ -32,7 +33,7 @@ node {
     npmWorkDir = file("${project.buildDir}/npm")
 
     // Set the work directory where node_modules should be located
-    nodeModulesDir = file("${project.projectDir}")
+    //nodeModulesDir = file("${project.projectDir}")
 }
 
 task npmBuild(type: NpmTask) {

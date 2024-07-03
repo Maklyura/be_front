@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
     <HelloWorld msg="Welcome to Your Vue.js App"/>
   </div>
 </template>
@@ -14,6 +13,10 @@ export default {
     HelloWorld
   }
 }
+
+let msg;
+console.log(window.Telegram.WebApp.initData
+)
 </script>
 
 <style>
